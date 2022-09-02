@@ -1,6 +1,8 @@
 @import
-  'cv/index.scss',
-  'google/index.scss'
+  '_constants.scss',
+  '_index.scss',
+  '_cv.scss',
+  '_google.scss'
 ;
 
 * {
@@ -24,6 +26,29 @@ a, a:link, a:visited, a:active {
 img {
   display: block;
   width: 100%;
+}
+
+.footer {
+  width: 100%;
+  background-color: inherit;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  // set height
+  // set border
+
+  a {
+    font-size: $font-xl;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:hover {
+      transform: scale(1.1);
+      // set color
+    }
+  }
 }
 
 @media (min-width: 576px) {

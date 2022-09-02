@@ -1,0 +1,76 @@
+@import '_constants.scss';
+
+$font-family: 'Roboto', sans-serif;
+
+$color-bg: #121212;
+$color-surface: #222222;
+$color-font: #ffffff;
+$color-secondary: #808080;
+
+$border: 2px solid $color-secondary;
+$border-r: 12px;
+
+.index-body {
+  font-family: $font-family;
+  color: $color-font;
+  background-color: $color-bg;
+  overflow: hidden;
+}
+
+.index-main {
+  height: 88vh;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 12vh;
+
+  a {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: $font-xxl;
+    border: $border;
+    border-radius: $border-r;
+    padding: 20px;
+    text-align: center;
+    background-color: $color-surface;
+    transition: all $transition;
+    
+    &:hover {
+      background-color: #000000;
+    }
+  }
+}
+
+.index-footer {
+  height: 12vh;
+  border-top: $border;
+
+  a {
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

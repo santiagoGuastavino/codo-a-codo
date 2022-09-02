@@ -20,8 +20,10 @@ app.use((req, res, next) => {
 
 app.use((err, req, res, next) => {
   const title = 'ERROR / Santiago'
+  const icon = '/img/icon_err.png'
   return res.status(err.code).render('error', {
     title,
+    icon,
     status: err.code,
     message: err.message
   })

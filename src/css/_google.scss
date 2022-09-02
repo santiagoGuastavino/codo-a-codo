@@ -30,10 +30,6 @@
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-
-        i {
-          color: red !important;
-        }
       }
     }
   }
@@ -46,9 +42,8 @@
   background-color: yellow;
 }
 
-.footer {
+.google-footer {
   height: 9.7vh; // 94px
-  width: 100vw;
   background-color: blue;
 }
 

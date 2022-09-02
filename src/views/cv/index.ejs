@@ -1,31 +1,78 @@
 <%- include('../partials/head') %>
-<body>
-  <div id="app" v-cloak>
-    <main class="main-cv">
-      <cv-header />
+<script src="js/cv.js" type="text/javascript" defer></script>
+<body class="cv-body">
 
-    </main>
-  </div>
+  <header class="cv-header">
+    <h1>Mi Currículum</h1>
+    <h2>Santiago Guastavino</h2>
+    <div class="trigger-box">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
 
-  <script src="https://unpkg.com/vue@3"></script>
+  <main class="cv-main">
 
-  <script>
+    <section class="cv-section">
 
-    const app = Vue.createApp()
+      <h3>Experiencia</h3>
 
-    app.component('cv-header', {
-      template: `
-        <header class="cv-header">
-          <h1>Mi Currículum</h1>
-          <h2>Santiago Guastavino</h2>
-          <div class="trigger-box">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </header>
-      `
-    })
+      <div>
+        <strong>Desarrollador Web</strong>
+        <p>Punto de compra</p>
+        <p>Agosto 2022 - presente</p>
+      </div>
 
-    app.mount('#app')
-  </script>
+      <div>
+        <strong>Desarrollador Web</strong>
+        <p>Pixel Ecom</p>
+        <p>Septiembre 2021 - Julio 2022</p>
+      </div>
+
+      <div>
+        <strong>Desarrollador Web</strong>
+        <p>Game Central</p>
+        <p>Marzo 2021 - Agosto 2022</p>
+      </div>
+
+      <div>
+        <strong>Topógrafo</strong>
+        <p>Pablo Barello & Asoc. Ingeniería Civil</p>
+        <p>Enero 2016 - Diciembre 2020</p>
+      </div>
+
+    </section>
+
+    <aside class="cv-aside">
+
+      <img src="https://avatars.githubusercontent.com/u/80531029?v=4" alt="profile-pic">
+      <strong>Me llamo</strong>
+      <p>Santiago</p>
+      <strong>Tengo</strong>
+      <p>30 años</p>
+      <strong>Vivo en</strong>
+      <p>Gualeguaychú, Entre Ríos</p>
+      <strong>Vivo con</strong>
+      <p>Mi 
+        <a class="side-link" target="_blank" rel="noreferrer" href="https://i.imgur.com/yQnqyfq.jpg">
+          perra
+        </a>
+      </p>
+      <strong>Soy</strong>
+      <p>de Boca</p>
+      <strong>Me gusta</strong>
+      <p>Programar cosas</p>
+      <strong>También</strong>
+      <p>Hacer deporte</p>
+      <strong>En mi tiempo libre</strong>
+      <p>Juego video juegos</p>
+
+    </aside>
+
+  </main>
+
+  <footer class="footer cv-footer">
+    <%- include('../partials/footer') %>
+  </footer>
+
 </body>
 </html>

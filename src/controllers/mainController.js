@@ -1,12 +1,26 @@
-export function welcome (req, res, next) {
-  const err = new Error('what')
-  err.code = 500
-  next(err)
+export function index (req, res, next) {
+  const title = 'Welcome / Santiago'
+  const icon = '/img/icon_index.png'
+  return res.status(200).render('index', {
+    title,
+    icon
+  })
 }
 
 export function cv (req, res, next) {
   const title = 'Mi Currículum / Santiago'
-  return res.status(200).render('cv/index.ejs', {
-    title
+  const icon = '/img/icon_cv.png'
+  return res.status(200).render('cv/index', {
+    title,
+    icon
+  })
+}
+
+export function google (req, res, next) {
+  const title = 'Google / Santiago'
+  const icon = ''
+  return res.status(200).render('google/index', {
+    title,
+    icon
   })
 }

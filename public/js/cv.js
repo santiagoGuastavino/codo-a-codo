@@ -1,6 +1,6 @@
-const aside = document.querySelector('.my-aside')
+const aside = document.querySelector('.cv-aside')
 const triggerDisplay = document.querySelector('.trigger-box i')
-const mainSection = document.querySelector('.my-section')
+const mainSection = document.querySelector('.cv-section')
 
 triggerDisplay.addEventListener('click', () => {
   aside.classList.toggle('display')
