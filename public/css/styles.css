@@ -1,0 +1,112 @@
+[v-cloak] {
+  display: none;
+}
+
+.main-cv {
+  font-family: "Roboto", sans-serif;
+}
+
+@media (min-width: 576px) {
+  .my-header h1 {
+    font-size: var(--xxl);
+  }
+  .my-header h2 {
+    font-size: var(--xl);
+  }
+  .trigger-box i {
+    font-size: var(--xl);
+  }
+  .my-section div strong,
+.my-section div p {
+    font-size: var(--m);
+  }
+}
+@media (min-width: 768px) {
+  .trigger-box {
+    display: none;
+  }
+  .my-section div::after {
+    width: 10%;
+    left: 0;
+    transform: none;
+  }
+  .my-section div strong,
+.my-section div p {
+    text-align: left;
+  }
+  .my-aside {
+    right: 0;
+    border: none;
+    border-left: var(--border);
+  }
+}
+.navbar {
+  height: 6.2vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar .nav-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar .nav-box .nav-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar .nav-box .nav-butons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar .nav-box .nav-butons .nav-btn-grid {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-box .nav-butons .nav-btn-grid i {
+  color: red !important;
+}
+
+.main {
+  height: 84.1vh;
+  width: 100vw;
+  background-color: yellow;
+}
+
+.footer {
+  height: 9.7vh;
+  width: 100vw;
+  background-color: blue;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a, a:link, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+<body>
+  <div id="app" v-cloak>
+    <main class="main-cv">
+      <cv-header />
+
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/vue@3"></script>
+
+  <script>
+
+    const app = Vue.createApp()
+
+    app.component('cv-header', {
+      template: `
+        <header class="cv-header">
+          <h1>Mi Currículum</h1>
+          <h2>Santiago Guastavino</h2>
+          <div class="trigger-box">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </header>
+      `
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+</html>
