@@ -33,7 +33,7 @@ $border-r: 12px;
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 40px;
-    font-size: $font-xxl;
+    font-size: $font-l;
     border: $border;
     border-radius: $border-r;
     padding: 20px;
@@ -60,7 +60,11 @@ $border-r: 12px;
 }
 
 @media (min-width: 576px) {
-
+  .index-main {
+    a {
+      font-size: $font-xxl;
+    }
+  }
 }
 
 @media (min-width: 768px) {

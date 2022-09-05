@@ -18,7 +18,7 @@ export function cv (req, res, next) {
 
 export function google (req, res, next) {
   const title = 'Google / Santiago'
-  const icon = ''
+  const icon = '/img/icon_google.png'
   return res.status(200).render('google/index', {
     title,
     icon

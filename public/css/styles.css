@@ -21,7 +21,7 @@
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 40px;
-  font-size: 36px;
+  font-size: 24px;
   border: 2px solid #808080;
   border-radius: 12px;
   padding: 20px;
@@ -41,6 +41,11 @@
   color: #808080;
 }
 
+@media (min-width: 576px) {
+  .index-main a {
+    font-size: 36px;
+  }
+}
 .cv-body {
   font-family: "Roboto", sans-serif;
   color: #121212;
@@ -229,48 +234,137 @@
     overflow-y: hidden;
   }
 }
-.navbar {
-  height: 6.2vh;
+.google-body {
+  font-family: arial, sans-serif;
+  background-color: #ffffff;
+  font-weight: 500;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.google-navbar {
+  height: 60px;
   width: 100vw;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
+  padding: 6px;
 }
-.navbar .nav-box {
+.google-navbar .nav-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 4px 0 32px;
+}
+.google-navbar .nav-box .nav-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.google-navbar .nav-box .nav-links p {
+  font-size: 13px;
+}
+.google-navbar .nav-box .nav-links p:first-child {
+  padding-right: 15px;
+}
+.google-navbar .nav-box .nav-buttons {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
 }
-.navbar .nav-box .nav-links {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: center;
-}
-.navbar .nav-box .nav-butons {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: center;
-}
-.navbar .nav-box .nav-butons .nav-btn-grid {
+.google-navbar .nav-box .nav-buttons .nav-button-grid {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  width: 48px;
+  height: 48px;
+}
+.google-navbar .nav-box .nav-buttons .nav-button-grid div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.google-navbar .nav-box .nav-buttons .nav-button-grid div:hover {
+  background-color: rgba(60, 64, 67, 0.08);
+}
+.google-navbar .nav-box .nav-buttons .nav-button-grid div img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+}
+.google-navbar .nav-box .nav-buttons .nav-button-button {
+  font-family: "Roboto", helvetica;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 16px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: #1a73e8;
+  color: #ffffff;
+  padding: 9px 23px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  min-width: 96px;
+  margin: 0 8px;
+}
+.google-navbar .nav-box .nav-buttons .nav-button-button:hover {
+  background-color: #1b66c9;
+  box-shadow: 0 1px 3px 1px rgba(66, 64, 67, 0.15), 0 1px 2px 0 rgba(60, 64, 67, 0.3);
 }
 
-.main {
+.google-main {
   height: 84.1vh;
   width: 100vw;
+  flex-grow: 3;
+  display: flex;
+  flex-flow: column wrap;
+}
+.google-main .logo {
+  width: 100%;
+  height: 290px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.google-main .logo div {
+  width: fit-content;
+}
+.google-main .search-bar {
+  width: 100%;
+  height: 160px;
+  padding: 20px;
+}
+.google-main .search-bar div {
+  margin: 0 auto;
+  padding-top: 6px;
+  width: auto;
+  max-width: 584px;
+  position: relative;
+}
+.google-main .more {
   background-color: yellow;
+  width: 100%;
+  height: 376px;
 }
 
 .google-footer {
-  height: 9.7vh;
-  background-color: blue;
+  height: 94px;
 }
 
 * {
