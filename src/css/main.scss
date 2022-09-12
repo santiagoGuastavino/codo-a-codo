@@ -2,7 +2,9 @@
   '_constants.scss',
   '_index.scss',
   '_cv.scss',
-  '_google.scss'
+  '_google.scss',
+  '_integrator.scss',
+  '_err.scss'
 ;
 
 * {
@@ -35,8 +37,20 @@ img {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+  position: relative;
   // set height
   // set border
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 1px;
+    // set box-shadow
+  }
 
   a {
     font-size: $font-xl;

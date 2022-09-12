@@ -1,10 +1,23 @@
 <%- include('./partials/head') %>
-<body>
-  <h1 class="my-header">esto es un error, código:</h1>
-  <h1 class="my-second"><%= status %></h1>
-  <h1>mensaje de error</h1>
-  <h1><%= message %></h1>
+<body class="err-body">
+  <main class="err-main">
+    <div>
+      <p>Error</p>
+      <p><%= status %></p>
+      <p><%= message %></p>
+    </div>
+  </main>
 
-  <%- include('./partials/footer') %>
+  <a href="/" class="err-go-home">
+    <p>
+      <i class="fa-solid fa-house"></i>
+      Ir al inicio
+    </p>
+  </a>
+
+  <footer class="footer err-footer">
+    <%- include('./partials/footer') %>
+  </footer>
+
 </body>
 </html>
