@@ -1,0 +1,44 @@
+@import '_constants.scss';
+
+.calculator-main {
+  padding-top: 12vh;
+  height: 88vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vh;
+    width: 300px;
+
+    label,
+    input,
+    button {
+      width: 100%;
+      padding: 6px;
+    }
+
+    label {
+      text-align: center;
+    }
+
+    .operation-box {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+
+      button {
+        width: 25%;
+      }
+    }
+  }
+}
+
+.calculator-footer {
+  height: 12vh;
+}

@@ -1,3 +1,8 @@
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
 export function index (req, res, next) {
   const title = 'Welcome / Santiago'
   const icon = '/img/icon_index.png'
@@ -26,9 +31,14 @@ export function google (req, res, next) {
 }
 
 export function integrator (req, res, next) {
-  const title = 'Integrador / Santiago'
-  const icon = '/img/icon_cac.png'
-  return res.status(200).render('integrador', {
+  const pagePath = join(__dirname, '../views/integrator/index.html')
+  return res.sendFile(pagePath)
+}
+
+export function calculator (req, res, next) {
+  const title = 'Calculadora / Santiago'
+  const icon = ''
+  return res.status(200).render('calculator', {
     title,
     icon
   })
