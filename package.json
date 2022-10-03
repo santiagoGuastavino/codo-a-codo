@@ -5,8 +5,8 @@
   "main": "./src/app.js",
   "type": "module",
   "scripts": {
-    "start": "NODE_ENV=production node ./src/app.js",
-    "dev": "NODE_ENV=development npm-run-all --parallel sass-watch nodemon-watch",
+    "start": "cross-env NODE_ENV=production node ./src/app.js",
+    "dev": "cross-env NODE_ENV=development npm-run-all --parallel sass-watch nodemon-watch",
     "sass-watch": "sass --no-source-map --watch src/css/main.scss public/css/styles.css",
     "nodemon-watch": "nodemon",
     "lint": "eslint . --fix"
@@ -20,6 +20,7 @@
     "sass": "^1.54.8"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^8.23.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",

@@ -1,47 +1,116 @@
-const n1 = document.querySelector('#n1')
-const n2 = document.querySelector('#n2')
-const operate = document.querySelector('#operate')
+const n1Input = document.querySelector('#n1')
+const n2Input = document.querySelector('#n2')
+const resultInput = document.querySelector('#result')
 
-const add = document.querySelector('#add')
-const substract = document.querySelector('#substract')
-const multiply = document.querySelector('#multiply')
-const divide = document.querySelector('#divide')
+const visorInput1 = document.querySelector('#visor-1')
+const visorInput2 = document.querySelector('#visor-2')
+const visorInput3 = document.querySelector('#visor-3')
+
+const operateButton = document.querySelector('#operate')
+const addButton = document.querySelector('#add')
+const substractButton = document.querySelector('#substract')
+const multiplyButton = document.querySelector('#multiply')
+const divideButton = document.querySelector('#divide')
+
+const errorBox = document.querySelector('#calculator-error-box')
 
 let operation = ''
 
-add.addEventListener('click', () => {
-  operation = '+'
+addButton.addEventListener('click', () => {
+  operation = 'add'
+  visorInput2.value = '+'
+  clearError('operationButton')
 })
 
-substract.addEventListener('click', () => {
-  operation = '-'
+substractButton.addEventListener('click', () => {
+  operation = 'substract'
+  visorInput2.value = '-'
+  clearError('operationButton')
 })
 
-multiply.addEventListener('click', () => {
-  operation = '*'
+multiplyButton.addEventListener('click', () => {
+  operation = 'multiply'
+  visorInput2.value = 'x'
+  clearError('operationButton')
 })
 
-divide.addEventListener('click', () => {
-  operation = '/'
+divideButton.addEventListener('click', () => {
+  operation = 'divide'
+  visorInput2.value = '/'
+  clearError('operationButton')
 })
 
-n1.addEventListener('input', () => {
-  const { value } = n1
+n1Input.addEventListener('input', () => {
+  visorInput1.value = n1Input.value
 })
 
-n2.addEventListener('input', () => {
-  const { value } = n2
+n2Input.addEventListener('input', () => {
+  visorInput3.value = n2Input.value
 })
 
-// function math (n1, n2, operation) {
+const errors = []
 
-//   console.log()
-//   return result
-// }
+operateButton.addEventListener('click', (e) => {
+  e.preventDefault()
 
-operate.addEventListener('click', (e) => {
-  const { n1Value } = n1
+  const n1Value = parseInt(n1Input.value)
+  const n2Value = parseInt(n2Input.value)
+
+  let result = 0
+
+  if (!n1Value || !n2Value) {
+    errors.push('Ingrese un número en cada campo')
+  }
+
   if (operation === '') {
-    e.preventDefault()
+    errors.push('Haga click en una operación')
+  }
+
+  if (!errors.length) {
+    switch (operation) {
+      case 'add':
+        result = n1Value + n2Value
+        break
+      case 'substract':
+        result = n1Value - n2Value
+        break
+      case 'multiply':
+        result = n1Value * n2Value
+        break
+      case 'divide':
+        result = n1Value / n2Value
+        break
+      default:
+        break
+    }
+
+    resultInput.value = result
+    n1Input.value = ''
+    n2Input.value = ''
+  } else {
+    errorBox.innerHTML = ''
+    printError(errors)
   }
 })
+
+function printError (errors) {
+  const errorSet = new Set(errors)
+  errorSet.forEach((error, i) => {
+    const span = document.createElement('span')
+    span.id = i
+    span.textContent = error
+    errorBox.append(span)
+  })
+
+  errorBox.classList.add('show')
+}
+
+window.addEventListener('load', () => {
+  n1Input.focus()
+})
+
+function clearError (errorToClear) {
+  if (errorToClear === 'operationButton') {
+    errors.filter(error => error === 'Haga click en una operación')
+  }
+}

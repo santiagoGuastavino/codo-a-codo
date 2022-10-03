@@ -4,76 +4,100 @@
 
   <main class="calculator-main">
 
-    <div>
-      <label>
-        Ingrese un número
-      </label>
-      <input
-        type="text"
-        name="n1"
-        id="n1"
-        required
-      >
-    </div>
+    <div class="calculator-wrapper">
+
+      <div>
+        <label>
+          Ingrese un número
+        </label>
+        <input
+          type="text"
+          name="n1"
+          id="n1"
+          required
+        >
+      </div>
+    
+      <div>
+        <label>
+          Ingrese otro número
+        </label>
+        <input
+          type="text"
+          name="n2"
+          id="n2"
+          required
+        >
+      </div>
+    
+      <div>
+        <label>
+          Ingrese una operación
+        </label>
   
-    <div>
-      <label>
-        Ingrese otro número
-      </label>
-      <input
-        type="text"
-        name="n2"
-        id="n2"
-        required
-      >
-    </div>
+        <div class="operation-box">
+          <button
+            id="add"
+          >
+            +
+          </button>
+          <button
+            id="substract"
+          >
+            -
+          </button>
+          <button
+            id="multiply"
+          >
+            x
+          </button>
+          <button
+            id="divide"
+          >
+            %
+          </button>
+        </div>
+      </div>
+      
+      <div class="visor-box">
+        <input
+          type="text"
+          name="visor-1"
+          id="visor-1"
+        />
+        <input
+          type="text"
+          name="visor-2"
+          id="visor-2"
+        />
+        <input
+          type="text"
+          name="visor-3"
+          id="visor-3"
+        />
+      </div>
   
-    <div>
-      <label>
-        Ingrese una operación
-      </label>
-      <div class="operation-box">
-        <button
-          id="add"
-        >
-          +
-        </button>
-        <button
-          id="substract"
-        >
-          -
-        </button>
-        <button
-          id="multiply"
-        >
-          x
-        </button>
-        <button
-          id="divide"
-        >
-          %
+      <div>
+        <button id="operate">
+          Calcular
         </button>
       </div>
-    </div>
     
-    <div>
-      <button id="operate">
-        Calcular
-      </button>
-    </div>
-  
-    <div>
-      <label>
-        Resultado
-      </label>
-      <input
-        type="text"
-        name="result"
-        id="result"
-        readonly
-      >
-    </div>
+      <div>
+        <label>
+          Resultado
+        </label>
+        <input
+          type="text"
+          name="result"
+          id="result"
+          readonly
+        >
+      </div>
 
+      <div id="calculator-error-box"></div>
+
+    </div>
   </main>
 
   <footer class="footer calculator-footer">
