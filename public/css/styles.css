@@ -573,6 +573,44 @@ section.my-carousel-right button#just-button:hover {
 
 #form-text-area {
   font-size: 24px;
+  resize: none;
+}
+
+button.button-send-form {
+  width: 99%;
+  display: block;
+  margin: 0 auto !important;
+  font-size: 20px;
+  background-color: #96c93e;
+  border: 1px solid #96c93e;
+  border-radius: 4px;
+  padding: 6px 0;
+  color: #fff;
+  transition: all 0.1s ease;
+}
+button.button-send-form:hover {
+  background-color: #29a442;
+  border: 1px solid #29a442;
+}
+
+.int-footer-wrapper {
+  width: 100%;
+  background-color: #1e5170 !important;
+  height: 12vh;
+}
+.int-footer-wrapper .int-footer {
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.int-footer-wrapper .int-footer p {
+  width: 100px;
+  font-size: 20px;
+  color: #fff;
 }
 
 .calculator-main {

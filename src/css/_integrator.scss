@@ -7,8 +7,11 @@ $c-gray: #949b9b;
 $c-darkgray: #353a40;
 $c-green: #29a442;
 $c-green-d: #007413;
+$c-green-l: #96c93e;
+$c-blue: #1e5170;
 
-$font-l: 24px;
+$font-xl: 24px;
+$font-l: 20px;
 $font-m: 16px;
 
 $transition: 0.1s ease;
@@ -66,7 +69,7 @@ $transition: 0.1s ease;
     }
 
     p {
-      font-size: $font-l;
+      font-size: $font-xl;
       color: $c-white;
     }
   }
@@ -227,7 +230,48 @@ section.my-carousel-right {
 }
 
 #form-text-area {
+  font-size: $font-xl;
+  resize: none;
+}
+
+button.button-send-form {
+  width: 99%;
+  display: block;
+  margin: 0 auto !important;
   font-size: $font-l;
+  background-color: $c-green-l;
+  border: 1px solid $c-green-l;
+  border-radius: 4px;
+  padding: 6px 0;
+  color: $c-white;
+  transition: all $transition;
+
+  &:hover {
+    background-color: $c-green;
+    border: 1px solid $c-green;
+  }
+}
+
+.int-footer-wrapper {
+  width: 100%;
+  background-color: $c-blue !important;
+  height: 12vh;
+
+  .int-footer {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    p {
+      width: 100px;
+      font-size: $font-l;
+      color: $c-white;
+    }
+  }
 }
 
 @media (min-width: 576px) {
