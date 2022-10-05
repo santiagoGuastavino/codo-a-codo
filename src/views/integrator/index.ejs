@@ -1,10 +1,19 @@
 <%- include('../partials/head') %>
 <head>
   <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- my script (to prevent form submission) -->
+  <script defer type="text/javascript">
+    window.addEventListener('load', () => {
+      const form = document.querySelector('.int-form')
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+      })
+    })
+  </script>
 </head>
 
 <body class="int-body">
@@ -45,13 +54,145 @@
 
   </section>
 
-  <main class="int-main">
-    <section class="int-banner">
+  <main class="int-my-card-group card-group w-75 mx-auto my-5">
+    <article class="card p-2">
+      <img class="card-img-top" src="/img/integrator/steve.jpg" alt="Card image cap">
+      <div class="card-body">
+        <span class="badge badge-warning">
+          Javascript
+        </span>
+        <span class="badge badge-info">
+          React
+        </span>
+        <h5 class="card-title">
+          Steve Jobs
+        </h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatibus modi nam laudantium fugiat rem excepturi ducimus sit. Quas molestias facere ullam dolor quod tenetur repellendus maiores voluptatum corporis quo?
+        </p>
+      </div>
+    </article>
 
-    </section>
-    <section class="">
+    <article class="card p-2">
+      <img class="card-img-top" src="/img/integrator/bill.jpg" alt="Card image cap">
+      <div class="card-body">
+        <span class="badge badge-warning">
+          Javascript
+        </span>
+        <span class="badge badge-info">
+          React
+        </span>
+        <h5 class="card-title">
+          Bill Gates
+        </h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatibus modi nam laudantium fugiat rem excepturi ducimus sit. Quas molestias facere ullam dolor quod tenetur repellendus maiores voluptatum corporis quo?
+        </p>
+      </div>
+    </article>
 
-    </section>
+    <article class="card p-2">
+      <img class="card-img-top" src="/img/integrator/ada.jpeg" alt="Card image cap">
+      <div class="card-body">
+        <span class="badge badge-warning">
+          Javascript
+        </span>
+        <span class="badge badge-danger">
+          Startups
+        </span>
+        <h5 class="card-title">
+          Ada Lovelace
+        </h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatibus modi nam laudantium fugiat rem excepturi ducimus sit. Quas molestias facere ullam dolor quod tenetur repellendus maiores voluptatum corporis quo?
+        </p>
+      </div>
+    </article>
   </main>
+  
+  <div class="carousel-wrapper my-5">
+    <section id="carouselExampleSlidesOnly" class="my-carousel carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="/img/integrator/ba2.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/img/integrator/ba3.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/img/integrator/hawaii.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/img/integrator/hawaii2.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/img/integrator/hawaii3.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/img/integrator/honolulu.jpg" alt="Third slide">
+        </div>
+      </div>
+    </section>
+    <section class="my-carousel-right">
+      <h2 class="p-3">
+        Bs As - Octubre
+      </h2>
+      <p class="p-3">
+        Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600km² de superficie).
+      </p>
+      <button class="m-3 p-2 rounded mx-2" id="just-button">
+        Conocé más
+      </button>
+    </section>
+  </div>
+
+  <form class="w-75 mx-auto int-form">
+    <article>
+      <p>
+        CONVIÉRTETE EN UN
+      </p>
+      <h2>
+        ORADOR
+      </h2>
+      <p>
+        Anótate como orador para dar una
+        <span>
+          charla ignite.
+        </span>
+        Cuéntanos de qué quieres hablar!
+      </p>
+    </article>
+    <div class="d-flex">
+      <div class="form-group w-50 px-2 my-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nombre"
+        >
+      </div>
+      <div class="form-group w-50 px-2 my-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Apellido"
+        >
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="form-check w-100 px-2 my-2">
+        <textarea
+          id="form-text-area"
+          class="form-control"
+          rows="3"
+          placeholder="Sobre qué quierés hablar?"
+        ></textarea>
+        <small class="form-text text-muted">
+          Recuerda incluír un título para tu charla
+        </small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
 </body>
 </html>
