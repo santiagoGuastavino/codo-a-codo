@@ -14,30 +14,30 @@ const divideButton = document.querySelector('#divide')
 
 const errorBox = document.querySelector('#calculator-error-box')
 
+window.addEventListener('load', () => {
+  n1Input.focus()
+})
+
 let operation = ''
 
 addButton.addEventListener('click', () => {
   operation = 'add'
   visorInput2.value = '+'
-  clearError('operationButton')
 })
 
 substractButton.addEventListener('click', () => {
   operation = 'substract'
   visorInput2.value = '-'
-  clearError('operationButton')
 })
 
 multiplyButton.addEventListener('click', () => {
   operation = 'multiply'
   visorInput2.value = 'x'
-  clearError('operationButton')
 })
 
 divideButton.addEventListener('click', () => {
   operation = 'divide'
   visorInput2.value = '/'
-  clearError('operationButton')
 })
 
 n1Input.addEventListener('input', () => {
@@ -57,14 +57,6 @@ operateButton.addEventListener('click', (e) => {
   const n2Value = parseInt(n2Input.value)
 
   let result = 0
-
-  if (!n1Value || !n2Value) {
-    errors.push('Ingrese un número en cada campo')
-  }
-
-  if (operation === '') {
-    errors.push('Haga click en una operación')
-  }
 
   if (!errors.length) {
     switch (operation) {
@@ -93,24 +85,14 @@ operateButton.addEventListener('click', (e) => {
   }
 })
 
-function printError (errors) {
-  const errorSet = new Set(errors)
-  errorSet.forEach((error, i) => {
+function printError () {
+  console.log(errors)
+  const errorsUnique = new Set(errors)
+  errorsUnique.forEach((error, i) => {
     const span = document.createElement('span')
     span.id = i
     span.textContent = error
     errorBox.append(span)
   })
-
   errorBox.classList.add('show')
-}
-
-window.addEventListener('load', () => {
-  n1Input.focus()
-})
-
-function clearError (errorToClear) {
-  if (errorToClear === 'operationButton') {
-    errors.filter(error => error === 'Haga click en una operación')
-  }
 }

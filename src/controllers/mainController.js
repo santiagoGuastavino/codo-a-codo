@@ -41,7 +41,7 @@ export function integrator (req, res, next) {
 
 export function calculator (req, res, next) {
   const title = 'Calculadora / Santiago'
-  const icon = ''
+  const icon = '/img/icon_calculator.png'
   return res.status(200).render('calculator', {
     title,
     icon
