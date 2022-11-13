@@ -9,12 +9,18 @@ $c-green: #29a442;
 $c-green-d: #007413;
 $c-green-l: #96c93e;
 $c-blue: #1e5170;
+$c-red: #ff5252;
 
 $font-xl: 24px;
 $font-l: 20px;
 $font-m: 16px;
 
-$transition: 0.1s ease;
+$transition: 0.08s ease;
+
+html,
+body {
+  background-color: $c-darkgray;
+}
 
 .int-body {
   font-family: $font-family;
@@ -63,6 +69,11 @@ $transition: 0.1s ease;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     img {
       width: 140px;
@@ -81,7 +92,7 @@ $transition: 0.1s ease;
     justify-content: flex-end !important;
     list-style: none !important;
 
-    li {
+    li, a {
       color: $c-gray;
       font-size: $font-m;
       margin: 0 10px;
@@ -105,7 +116,6 @@ $transition: 0.1s ease;
       }
 
       &:hover {
-        color: $c-white;
         text-decoration: underline;
         transform: scale(1.02);
 
@@ -138,7 +148,7 @@ $transition: 0.1s ease;
     flex-flow: row wrap;
     justify-content: flex-end;
 
-    button {
+    button, a {
       font-family: $font-family;
       font-size: $font-m;
       color: $c-white;
@@ -155,12 +165,14 @@ $transition: 0.1s ease;
       }
     }
 
-    button#success {
+    a#success {
       background-color: #29a442 !important;
       border: 1px solid transparent;
+      cursor: pointer;
 
       &:hover {
         background-color: $c-green-d !important;
+        text-decoration: none;
       }
     }
   }

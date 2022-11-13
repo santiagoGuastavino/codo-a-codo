@@ -1,8 +1,3 @@
-// import { dirname, join } from 'path'
-// import { fileURLToPath } from 'url'
-
-// const __dirname = dirname(fileURLToPath(import.meta.url))
-
 export function index (req, res, next) {
   const title = 'Welcome / Santiago'
   const icon = '/img/icon_index.png'
@@ -25,15 +20,6 @@ export function google (req, res, next) {
   const title = 'Google / Santiago'
   const icon = '/img/icon_google.png'
   return res.status(200).render('google', {
-    title,
-    icon
-  })
-}
-
-export function integrator (req, res, next) {
-  const title = 'Integrador / Santiago'
-  const icon = '/img/icon_int.png'
-  return res.status(200).render('integrator', {
     title,
     icon
   })

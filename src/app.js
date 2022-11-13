@@ -1,6 +1,7 @@
 import express from 'express'
 import path from 'path'
 import mainRouter from './routes/main.js'
+import integratorRouter from './routes/integrator.js'
 
 const app = express()
 
@@ -11,6 +12,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.resolve('./src/views'))
 
 app.use('/', mainRouter)
+app.use('/integrator', integratorRouter)
 
 app.use((req, res, next) => {
   const notFound = new Error('Not found')
