@@ -1,8 +1,10 @@
+import * as dotenv from 'dotenv'
 import express from 'express'
 import path from 'path'
 import mainRouter from './routes/main.js'
 import integratorRouter from './routes/integrator.js'
 
+dotenv.config()
 const app = express()
 
 app.use(express.static(path.resolve('./public')))
@@ -31,5 +33,5 @@ app.use((err, req, res, next) => {
   })
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, () => console.log(`Server running @ ${PORT}`))
